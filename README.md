@@ -1,6 +1,6 @@
-"# Zimgit Website" 
+# Zimgit Website" 
 
-#Setup
+# Setup
 1. Install python virtual environment (I use conda on mac) 
 - https://www.anaconda.com/products/individual
 
