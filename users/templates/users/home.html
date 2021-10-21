@@ -1,0 +1,84 @@
+{% extends 'users/base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <div class="container">
+            <div class="row g-0">
+                <div class="col-sm-6 col-md-8" id="header-text">
+                  <h1 id="header-h1">Zim<span style="color:#e02828;">git</span> <br> test. </h1>
+                  <p id="header-paragraph">First website, <br> Test 123</p>
+                  <a class="btn" href="{% url 'details' %}" style="color: white; background-color: #e02828;"type="submit" id="body-link-row">Discover More</a>
+                </div>
+
+                <div class="col-6 col-md-4" id="header-image"><img src="images/in-liquid-slide-2.svg " alt=""></div>
+              </div>
+    </div>
+    <br> 
+    <hr style="border:none; background-color: white; height:4px;">
+    <font color = "FFFFFF">
+    <div>
+      <center>
+          <blockquote>
+          <h3>Download directly to your mobile device</h3> 
+          <img src="{% static 'images/image1.png' %}"> <br>     
+           Browse our selection of ZIM libraries. Select your favorites
+            and download directly to your mobile device
+          </blockquote>
+          <blockquote>
+          <h3>Order Pre-Loaded Micro SD Cards</h3>
+          Files can be very large and download times long not to 
+          mention possible data charges by your carrier.   Order pre-loaded
+           Micro SD cards.
+          </blockquote>
+          <blockquote>
+          <h3>Order Preconfigured Wifi Hotspots Access from your mobile device</h3>
+          Want access for several users?  Order a pre-loaded
+           and pre-configured wifi hotspot.  <br>Plug it in and 
+           connect without being connected to the world side web.
+          </blockquote>
+          <blockquote>
+          <h3>Access your content!</h3>
+          Use the free KIWIX reader to access your files. 
+        </blockquote>
+      </center>
+    </div>
+    <br>
+    <hr style="border:none; background-color: white; height:4px;">
+    <div>
+      <center>
+      <blockquote>
+      <h3>Availability</h3>
+      In a grid down situation due to disaster or cyber attack, quick 
+      access to knowledge could mean the difference between life 
+      or death. <br>Increasingly, even information censorship, which 
+      was once only the concern of citizens in authoritarian 
+      countries, is now <br>common in "free" democracies.
+    </blockquote>
+    <blockquote>
+      <h3>Security</h3>
+      Browsing information that is stored offline on 
+      your device or on your own  air-gapped hot spot
+       is not tracked or susceptible to viruses. 
+      </blockquote>
+      <blockquote>
+      <h3>Preservation</h3>
+      Decentralized copies of your favorite libraries ensure 
+      their preservation.
+    </blockquote>
+    <blockquote>
+      <h3>Avoid Internet Distractions</h3>
+      Providing home school material on your own hot spot will
+       avoid the distractions a www connected student might
+        encounter.
+      </blockquote>
+      <blockquote>
+      <h3>It's mostly about convenience</h3>
+      A thousand books can be compressed into a single 1 Gigabyte file. 
+      The .zim format  along with the Kiwix reader allows for fast and easy searches.
+      </blockquote>
+    </center>
+    </div>
+
+
+  </font>
+{% endblock content %}
