@@ -4,6 +4,9 @@ from .forms import UserRegisterForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
+from django.views import generic
+from .models import Product
+
 
 def home(request):
     return render(request, 'users/home.html')
@@ -17,8 +20,8 @@ def creators(request):
 def use_cases(request):
     return render(request, 'users/use_cases.html')
 
-def libraries(request):
-    return render(request, 'users/libraries.html')
+#def libraries(request):
+#   return render(request, 'users/libraries.html')
 
 def contact_us(request):
     return render(request, 'users/contact_us.html')
@@ -40,3 +43,10 @@ def register(request):
 @login_required()
 def profile(request):
     return render(request, 'users/profile.html')
+
+#Libraries
+class ProductListView(generic.ListView):
+    model = Product
+    context_object_name = 'products'
+    queryset = Product.objects.filter()
+    template_name = 'users/libraries.html'
