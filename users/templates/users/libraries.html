@@ -32,19 +32,26 @@
 <body>
     <div class="container">
       <div class="row">
-        
         {% for product in products %}
-        <div class="col">
-         <div class="card">
-          <img src="{{product.image}}" class="card-img-top">
+        <div class="col-sm-3" style="padding-bottom: 30px">
+         <div class="card" style="height: 32rem">
+          <img src="/static/users/images/{{product.filename}}" class="card-img-top" style="height:18rem;">
           <div class="card-body">
-            <div class="card-title">{{product.name}}</div>
-            <div class="card-text">${{product.price}}</div>
-            <div class="card-text">{{product.description}}</div>
-            <div class="card-text">{% autoescape off %}{{product.paypal_button}}{% endautoescape %}</div>
-            {% if product.file.url != null %}
-              <a class="btn btn-danger btn-block" role="button" href="{{product.file.url}}" download target="_self">Download</a>
-            {% endif %}
+            <div class="card-title" style="height: 1rem;"><h4>{{product.name}}</h4></div>
+            <div class="card-text"style="height: 2rem;">${{product.price}}</div>
+            <div class="card-text"style="height: 2rem;">{{product.description}}</div>
+          </div>
+          <div class="card-body">
+              <div class="row">
+              <div class="col">
+                {% autoescape off %}{{product.paypal_button}}{% endautoescape %}
+              </div>
+              <div class="col">
+                {% if product.file.url != null %}
+                <a class="btn btn-danger btn-block" role="button" href="{{product.file.url}}" download target="_self" style="margin-top: 30%; margin-left: 20%">Download</a>
+                {% endif %}
+              </div>
+            </div>
           </div>
          </div>
         </div>
